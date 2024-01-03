@@ -1,0 +1,21 @@
+<ion-header>
+<ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-button color="medium" (click)="cancel()">Cancelar</ion-button>
+    </ion-buttons>
+    <ion-title>Producto</ion-title>
+    <ion-buttons slot="end">
+    <ion-button (click)="confirm()" [strong]="true">Confirmar</ion-button>
+    </ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+<ion-item>
+    <ion-input labelPlacement="stacked" label="UPC" [(ngModel)]="upc" placeholder="UPC"></ion-input>
+    <ion-input labelPlacement="stacked" label="Nombre del Producto" [(ngModel)]="prodName" placeholder="Producto"></ion-input>
+    <ion-input labelPlacement="stacked" label="Fabricante" [(ngModel)]="mfgr" placeholder="Fabricante"></ion-input>
+    <ion-input labelPlacement="stacked" label="Modelo" [(ngModel)]="model" placeholder="Modelo"></ion-input>
+    <ion-input labelPlacement="stacked" label="Stock" type="number" [(ngModel)]="stock" placeholder="Stock"></ion-input>
+    <ion-input labelPlacement="stacked" label="Precio Unitario" type="number" [(ngModel)]="unitPrice" placeholder="Precio"></ion-input>
+</ion-item>
+</ion-content>

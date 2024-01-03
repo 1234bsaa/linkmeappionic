@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      LinkMeApp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Inventario de Productos</strong>
+    <p>Powered by Ionic</p>
+    <ng-container>
+      <ul>
+        <li *ngFor="let product of product">
+          <h3>{{ product.prodName }}</h3>
+          <p>ID: {{ product.id }}</p>
+          <p>Fabricante: {{ product.mfgr }}</p>
+          <p>Modelo: {{ product.model }}</p>
+          <p>Stock: {{ product.stock }}</p>
+          <p>Precio Unitario: {{ product.unitPrice }}</p>
+
+          <ion-button (click)="updateModal(product)" color="tertiary">Editar</ion-button>
+          <ion-button (click)="deleteProduct(product.id)" color="danger">Borrar</ion-button>
+        </li>
+      </ul>
+    </ng-container>
+    <ion-button (click)="createModal()">Crear</ion-button>
+    <!-- <div>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Controller Modal</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-button expand="block" (click)="openModal()">Open</ion-button>
+        <p>{{ message }}</p>
+      </ion-content>
+    </div> -->
+  </div>
+</ion-content>
+
